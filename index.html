@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        WhatsApp-WebApp
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/angular1.4.8.min.js"></script>
+    <script src="js/chats_data.js"></script>
+    <script src="js/tabs_action.js"></script>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+    <!---Top 1 -->
+    <div class="top_head1">
+        <div class="top_head2">
+            <h2>WhatsApp-WebApp</h2>
+        </div>
+        <div class="top_head_right">
+            <img src="images/mg3.jpg" alt="" />
+        </div>
+    </div>
+    <!---Top 1 ends -->
+    <div style="clear: both;"></div>
+    <!---Top 2 -->
+    <div class="top_section">
+        <div>
+            <ul class="w_navbar">
+                <li><a href="#" class="tablink w_select" onclick="openTab(event, 'calls');"> CALLS  </a></li>
+                <li><a href="#" class="tablink" onclick="openTab(event, 'chats');"> CHATS </a></li>
+                <li><a href="#" class="tablink" onclick="openTab(event, 'contacts');"> CONTACTS </a></li>
+            </ul>
+        </div>
+        <!---Top 2 ends -->
+        <!-- Calls -->
+        <div style="display: block;" id="calls" class="tab_hide">
+            <h2>Working on ...</h2>
+            <p>Comming up soon</p>
+        </div>
+        <!-- Calls ends -->
+        <!-- Chat Main Part starts here -->
+        <div id="chats" class="tab_hide tab_main_chat1">
+            <!-- chat repeated here -->
+            <div ng-app="myApp">
+                <div ng-controller="myCtrl">
+                    <div ng-repeat="x in records">
+                        <!-- Chats starts-->
+                        <div style="clear:both"></div>
+                        <div class="tab_main_dp">
+                            <div class="x0">
+                                <div class="x1">
+                                    <div class="x2">
+                                        <img src="images/mg1.jpg" style="width: 100%; height: 100%" alt="" >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab_main_name1">
+                                <div class="tab_main_name2">
+                                    <div class="tab_main_name3">
+                                        {{x.Name}}
+                                    </div>
+                                    <div class="top_main_time">
+                                        {{x.time}}
+                                    </div>
+                                </div>
+                                <div style="clear:both;"></div>
+                                <div class="top_main_message">
+                                    {{x.message}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="clear:both"></div>
+                <!-- Chats ends-->
+            </div>
+        </div>
+    </div>
+    <!-- chat repeated ends here -->
+    </div>
+    <!-- Chat Main Part ends here -->
+    </div>
+    </div>
+    </div>
+    <div id="contacts" class="tab_hide">
+        <h4>We are working on this ...</h4>
+    </div>
+    </div>
+</body>
+
+</html>
